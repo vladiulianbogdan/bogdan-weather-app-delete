@@ -1,0 +1,14 @@
+name: bogdan-weather-app-delete
+region: us-east-1
+cloudProvider: genezio
+frontend:
+    path: client/dist
+    subdomain: mediumaquamarine-several-wildebeest
+scripts:
+    preBackendDeploy: npm install
+    preFrontendDeploy: npm install @genezio-sdk/bogdan-weather-app-delete_us-east-1 && npm install && npm run build
+    preStartLocal: npm install
+workspace:
+    backend: server
+    frontend: client
+language: ts
